@@ -2853,3 +2853,22 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* Memaksa semua gambar portofolio punya tinggi yang sama */
+.portfolio-item .portfolio-img img {
+  width: 100%;
+  height: 250px; /* sesuai selera */
+  object-fit: cover; /* otomatis terpotong rapi tanpa gepeng */
+  object-position: center; /* Fokus potongan ada di tengah gambar */
+}
+
+/* Biar card portofolio tingginya seragam */
+.portfolio-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-info {
+  flex-grow: 1;
+}
