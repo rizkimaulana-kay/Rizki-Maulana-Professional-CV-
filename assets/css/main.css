@@ -1,197 +1,112 @@
+/**
+* Template Name: FolioOne - Custom Optimized
+* Updated: May 2026
+*/
+
 /*--------------------------------------------------------------
-# Global Variables
+# Font & Color Variables
 --------------------------------------------------------------*/
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, sans-serif;
-  --heading-font: "Raleway", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+
   --background-color: #101a20;
   --default-color: #e7f2f7;
   --heading-color: #ffffff;
   --accent-color: #1387c1;
   --surface-color: #141f26;
   --contrast-color: #ffffff;
-  --nav-mobile-background-color: #1a2c38;
+
+  --nav-color: #ffffff; 
+  --nav-hover-color: #1387c1;
+  --nav-mobile-background-color: #1a2c38; /* Dipergelap supaya tidak transparan */
+  --nav-dropdown-background-color: #051117;
+  --nav-dropdown-color: #e7f2f7;
+  --nav-dropdown-hover-color: #1387c1;
+
+  scroll-behavior: smooth;
 }
 
-body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
-}
-
-a { color: var(--accent-color); text-decoration: none; transition: 0.3s; }
-a:hover { color: color-mix(in srgb, var(--accent-color), white 20%); }
+.light-background { --background-color: #142027; --surface-color: #325264; }
+.dark-background { --background-color: #0b1419; --default-color: #ffffff; --heading-color: #ffffff; --surface-color: #252525; --contrast-color: #ffffff; }
 
 /*--------------------------------------------------------------
-# Navigation Menu & Mobile Fix (Poin 1)
+# General Styling
+--------------------------------------------------------------*/
+body { color: var(--default-color); background-color: var(--background-color); font-family: var(--default-font); }
+a { color: var(--accent-color); text-decoration: none; transition: 0.3s; }
+a:hover { color: color-mix(in srgb, var(--accent-color), transparent 25%); }
+h1, h2, h3, h4, h5, h6 { color: var(--heading-color); font-family: var(--heading-font); }
+
+/* PHP Email Form Messages */
+.php-email-form .error-message { display: none; background: #df1529; color: #ffffff; padding: 15px; margin-bottom: 24px; font-weight: 600; }
+.php-email-form .sent-message { display: none; color: #ffffff; background: #059652; text-align: center; padding: 15px; margin-bottom: 24px; font-weight: 600; }
+.php-email-form .loading { display: none; background: var(--surface-color); text-align: center; padding: 15px; margin-bottom: 24px; }
+.php-email-form .loading:before { content: ""; display: inline-block; border-radius: 50%; width: 24px; height: 24px; margin: 0 10px -6px 0; border: 3px solid var(--accent-color); border-top-color: var(--surface-color); animation: php-email-form-loading 1s linear infinite; }
+@keyframes php-email-form-loading { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/*--------------------------------------------------------------
+# Global Header
 --------------------------------------------------------------*/
 .header {
-  background: rgba(16, 26, 32, 0.95);
+  --background-color: rgba(255, 255, 255, 0);
+  background-color: var(--background-color);
   padding: 15px 0;
-  transition: 0.5s;
+  transition: all 0.5s;
   z-index: 997;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
 }
 
-.navmenu ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
+.scrolled .header { --background-color: rgba(16, 26, 32, 0.95); }
 
-.navmenu a {
-  color: var(--default-color);
-  padding: 0 15px;
-  font-family: var(--nav-font);
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.navmenu a:hover, .navmenu .active {
-  color: var(--accent-color);
-}
-
-/* Tampilan Mobile */
+/*--------------------------------------------------------------
+# Navigation Menu (Mobile Menu Fix - Poin 1)
+--------------------------------------------------------------*/
 @media (max-width: 1199px) {
-  .mobile-nav-toggle {
-    color: var(--default-color);
-    font-size: 28px;
-    cursor: pointer;
-    line-height: 0;
-    transition: 0.5s;
-  }
-
   .navmenu ul {
-    display: none; /* Hidden by default */
-    position: fixed;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
-    margin: 0;
-    border-radius: 10px;
-    background-color: var(--nav-mobile-background-color);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    overflow-y: auto;
-    transition: 0.3s;
-    z-index: 9998;
-    flex-direction: column;
-    align-items: flex-start;
+    background-color: var(--nav-mobile-background-color) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5) !important;
   }
+  .navmenu a { border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .mobile-nav-active .navmenu { background: rgba(0, 0, 0, 0.8) !important; }
+}
 
-  .navmenu ul li { width: 100%; }
-  .navmenu ul a {
-    padding: 15px 20px;
-    width: 100%;
-    display: block;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-
-  .mobile-nav-active .navmenu ul { display: flex; }
-  .mobile-nav-active .mobile-nav-toggle { color: var(--accent-color); }
+/* Desktop Nav */
+@media (min-width: 1200px) {
+  .navmenu ul { display: flex; list-style: none; align-items: center; margin: 0; padding: 0; }
+  .navmenu li { position: relative; padding: 15px 28px 15px 0; }
+  .navmenu a { color: var(--nav-color); font-size: 15px; font-family: var(--nav-font); transition: 0.3s; position: relative; }
+  .navmenu a:before { content: ""; position: absolute; height: 2px; bottom: -6px; left: 0; background-color: var(--nav-hover-color); visibility: hidden; width: 0; transition: 0.3s; }
+  .navmenu a:hover:before, .navmenu .active:before { visibility: visible; width: 25px; }
+  .navmenu a:hover, .navmenu .active { color: var(--nav-hover-color); }
 }
 
 /*--------------------------------------------------------------
-# Portfolio Filters (Poin 4)
+# Portfolio Section (Filter Pills Fix - Poin 4)
 --------------------------------------------------------------*/
-.portfolio-filters {
-  padding: 0;
-  margin: 0 auto 30px auto;
-  list-style: none;
-  text-align: center;
-}
-
-.portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 20px;
-  margin: 5px;
+.portfolio .portfolio-filters { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; list-style: none; padding: 0; }
+.portfolio .portfolio-filters li {
+  padding: 10px 22px;
   font-size: 14px;
   font-weight: 500;
-  line-height: 1;
-  text-transform: uppercase;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--default-color);
-  background: rgba(255,255,255,0.05);
-  border-radius: 50px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: all 0.3s ease-in-out;
 }
-
-.portfolio-filters li:hover, .portfolio-filters li.filter-active {
-  color: #fff;
-  background: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Expertise Matrix (About)
---------------------------------------------------------------*/
-.skill-box {
-  background: var(--surface-color);
-  padding: 25px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: 0.3s;
-}
-
-.skill-box:hover { transform: translateY(-5px); border-color: var(--accent-color); }
-
-.progress {
-  height: 10px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 50px;
-  margin-top: 10px;
-}
-
-.progress-bar {
+.portfolio .portfolio-filters li:hover, .portfolio .portfolio-filters li.filter-active {
   background-color: var(--accent-color);
-  transition: width 1.5s ease-in-out;
-}
-
-/*--------------------------------------------------------------
-# Service Details - Featured Cards (Poin 3)
---------------------------------------------------------------*/
-.feature-card {
-  background: var(--surface-color);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 15px;
-  padding: 25px;
-  height: 100%;
-  transition: 0.3s;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.feature-card:hover {
-  background: linear-gradient(145deg, var(--surface-color), #1c2d38);
+  color: var(--contrast-color);
   border-color: var(--accent-color);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-.feature-card i {
-  font-size: 2rem;
-  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
-# General Layout
+# Skill Badges (Resume - Poin 2)
 --------------------------------------------------------------*/
-.section-title h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 20px; text-align: center; }
-.section-title p { text-align: center; color: rgba(255,255,255,0.6); }
-
-.btn-primary {
-  background: var(--accent-color);
-  border: none;
-  padding: 10px 25px;
-  border-radius: 50px;
-  color: #fff;
-  font-weight: 600;
-}
-
-/* Skill Badges Styling */
 .skill-badge {
   background: var(--surface-color);
   color: var(--default-color);
@@ -200,11 +115,10 @@ a:hover { color: color-mix(in srgb, var(--accent-color), white 20%); }
   border-radius: 50px;
   font-size: 14px;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: 0.3s;
   display: inline-block;
-  cursor: default;
+  margin: 5px;
 }
-
 .skill-badge:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -212,8 +126,57 @@ a:hover { color: color-mix(in srgb, var(--accent-color), white 20%); }
   box-shadow: 0 5px 15px rgba(19, 135, 193, 0.3);
 }
 
-/* Penyesuaian Spasi di Resume Content */
-.resume-content .mb-4 {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.95rem;
+/*--------------------------------------------------------------
+# Service Details - Feature Cards (Poin 3)
+--------------------------------------------------------------*/
+.feature-card {
+  background: var(--surface-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  height: 100%;
+  transition: 0.3s ease;
+  text-align: left;
 }
+.feature-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+  background: linear-gradient(145deg, var(--surface-color), #1c2d38);
+}
+.feature-card i { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 15px; display: block; }
+.feature-card h5 { font-weight: 700; margin-bottom: 10px; }
+
+/*--------------------------------------------------------------
+# Global Sections & Progress Bars
+--------------------------------------------------------------*/
+section, .section { padding: 60px 0; scroll-margin-top: 100px; overflow: clip; }
+.section-title h2 { font-size: 3.5rem; text-align: center; }
+
+.progress { height: 8px; background-color: rgba(255, 255, 255, 0.1); border-radius: 10px; margin-top: 10px; overflow: hidden; }
+.progress-bar { background-color: var(--accent-color); transition: width 1.5s ease-in-out; border-radius: 10px; }
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero { padding: 80px 0; min-height: 100vh; display: flex; align-items: center; }
+.hero .hero-content h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 700; }
+.hero .highlight { color: var(--accent-color); }
+.hero .btn { padding: 12px 30px; border-radius: 50px; font-weight: 600; border: 2px solid; transition: 0.3s; }
+.hero .btn-primary { background: var(--accent-color); color: var(--contrast-color); border-color: var(--accent-color); }
+.hero .btn-outline { border-color: var(--accent-color); color: var(--accent-color); }
+
+/* Tombol CV (Standard Green) */
+.btn-cv { background: #25d366 !important; color: white !important; border-color: #25d366 !important; margin-left: 10px; }
+.btn-cv:hover { background: transparent !important; color: #25d366 !important; transform: translateY(-3px); }
+
+@media (max-width: 575px) {
+  .hero-actions { display: flex; flex-direction: column; gap: 10px; }
+  .btn-cv { margin-left: 0; justify-content: center; }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footer { padding: 40px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); text-align: center; }
+.scroll-top { position: fixed; visibility: hidden; opacity: 0; right: 15px; bottom: 15px; background: var(--accent-color); width: 44px; height: 44px; border-radius: 50%; transition: 0.4s; }
+.scroll-top.active { visibility: visible; opacity: 1; }
