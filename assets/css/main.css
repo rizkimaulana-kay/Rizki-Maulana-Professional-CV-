@@ -138,3 +138,4 @@ h1, h2, h3, h4, h5, h6 { color: var(--heading-color); font-family: var(--heading
 .skill-badge:hover { background: var(--accent-color); transform: translateY(-3px); }
 
 .btn-cv { background: #25d366 !important; color: white !important; border-radius: 50px; padding: 10px 25px; font-weight: 600; }
+ 
