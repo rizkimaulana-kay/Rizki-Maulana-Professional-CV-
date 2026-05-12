@@ -2915,3 +2915,38 @@ section,
   opacity: 1;
   padding-left: 5px;
 }
+
+/* Tombol Download CV */
+.btn-cv {
+  background: #25d366; /* Warna hijau sukses biar stand out */
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.btn-cv:hover {
+  background: transparent;
+  color: #25d366;
+  border-color: #25d366;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Responsif buat HP biar nggak berantakan */
+@media (max-width: 575px) {
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn-cv {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
