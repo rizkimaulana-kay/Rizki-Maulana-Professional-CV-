@@ -6,7 +6,21 @@
   <title>Detail Mapping Nasional - Rizki Maulana</title>
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* Custom Styling for Interactivity */
+    .accordion-item { background: var(--surface-color); border: 1px solid rgba(255,255,255,0.1); margin-bottom: 15px; border-radius: 12px !important; overflow: hidden; }
+    .accordion-button { background: var(--surface-color); color: var(--heading-color); font-weight: 600; padding: 20px; transition: 0.3s; }
+    .accordion-button:not(.collapsed) { background: rgba(19, 135, 193, 0.1); color: var(--accent-color); box-shadow: none; }
+    .accordion-button::after { filter: invert(1); }
+    .accordion-button i { transition: 0.3s; margin-right: 12px; font-size: 1.2rem; color: var(--accent-color); }
+    .accordion-button:not(.collapsed) i { transform: scale(1.2); filter: drop-shadow(0 0 5px var(--accent-color)); }
+    .accordion-body { color: rgba(255,255,255,0.7); line-height: 1.7; padding: 25px; }
+    .feature-list-pro { list-style: none; padding: 0; }
+    .feature-list-pro li { background: rgba(255,255,255,0.03); margin-bottom: 10px; padding: 12px 18px; border-radius: 8px; border-left: 3px solid var(--accent-color); transition: 0.3s; }
+    .feature-list-pro li:hover { background: rgba(19, 135, 193, 0.1); transform: translateX(5px); }
+  </style>
 </head>
 
 <body class="portfolio-details-page">
@@ -18,47 +32,78 @@
           <li><a href="portfolio.html" class="active">Portfolio</a></li>
           <li><a href="https://www.dopagency.my.id/" target="_blank" style="background: var(--accent-color); color: white; padding: 8px 15px; border-radius: 50px; margin-left: 15px; font-weight: 600;">Visit DOP Agency <i class="bi bi-arrow-up-right-circle ms-1"></i></a></li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
   </header>
 
   <main class="main">
     <section class="portfolio-details section">
-      <div class="container section-title">
-        <h2>Detail Proyek: Mapping Nasional</h2>
-        <p>Sistem Pemetaan Terintegrasi Vendor & Customer IBT.</p>
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Mapping Nasional: Vendor & Customer</h2>
+        <p>Optimasi Geospasial untuk Kecepatan Respon Operasional IBT.</p>
       </div>
+
       <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-7">
-            <img src="assets/img/portfolio/portofolio-6.jpg" alt="Mapping Project" class="img-fluid rounded-4">
+        <div class="row gy-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <div class="portfolio-details-media">
+               <img src="assets/img/portfolio/portofolio-6.jpg" alt="Mapping Project" class="img-fluid rounded-4 shadow-lg border border-secondary">
+            </div>
           </div>
-          <div class="col-lg-5">
+
+          <div class="col-lg-5" data-aos="fade-left">
             <div class="portfolio-details-content">
-              <h2 class="project-title">Mapping Vendor & Customer</h2>
-              <p class="lead">Membantu tim CRO dan SA dalam proses pemetaan secara real-time untuk mempercepat pencarian bengkel rekanan.</p>
+              <h2 class="project-title mb-4">Strategi Pemetaan Real-time</h2>
               
               <div class="accordion" id="mappingAccordion">
                 <div class="accordion-item">
-                  <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1">Gambaran Proyek</button></h2>
-                  <div id="c1" class="accordion-collapse collapse show"><div class="accordion-body">Visualisasi pemetaan lokasi customer yang mengajukan service dengan memilih bengkel terdekat secara instan di area manapun di Indonesia.</div></div>
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+                      <i class="bi bi-geo-alt"></i> Gambaran Proyek
+                    </button>
+                  </h2>
+                  <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#mappingAccordion">
+                    <div class="accordion-body">
+                      Membantu tim CRO dan SA dalam proses pemetaan secara <strong>real-time</strong> jika ada customer yang mengajukan service di area tertentu. Sistem akan otomatis merekomendasikan bengkel terdekat untuk efisiensi waktu.
+                    </div>
+                  </div>
                 </div>
+
                 <div class="accordion-item">
-                  <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">Tantangan Operasional</button></h2>
-                  <div id="c2" class="accordion-collapse collapse"><div class="accordion-body">Sebelumnya pencarian bengkel dilakukan manual, memakan waktu lama, dan sulit melakukan koordinasi cepat dengan tim operasional cabang di area customer.</div></div>
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2">
+                      <i class="bi bi-exclamation-triangle"></i> Tantangan Operasional
+                    </button>
+                  </h2>
+                  <div id="c2" class="accordion-collapse collapse" data-bs-parent="#mappingAccordion">
+                    <div class="accordion-body">
+                      Sulitnya koordinasi cepat antara tim pusat dan cabang saat terjadi kendala armada customer di lokasi terpencil. Pencarian bengkel manual seringkali memakan waktu berjam-jam.
+                    </div>
+                  </div>
                 </div>
+
                 <div class="accordion-item">
-                  <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">Solusi & Otomatisasi</button></h2>
-                  <div id="c3" class="accordion-collapse collapse"><div class="accordion-body">Sistem dashboard mapping yang mempercepat proses booking bengkel dan memudahkan koordinasi operasional cabang di seluruh wilayah nasional.</div></div>
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3">
+                      <i class="bi bi-lightning-charge"></i> Solusi & Otomatisasi
+                    </button>
+                  </h2>
+                  <div id="c3" class="accordion-collapse collapse" data-bs-parent="#mappingAccordion">
+                    <div class="accordion-body">
+                      Integrasi database vendor nasional ke dalam <strong>Google Maps Dashboard</strong>. Mempercepat proses booking bengkel, mempermudah koordinasi dengan tim operasional cabang, dan memangkas birokrasi pencarian data.
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div class="project-features mt-4">
-                <h3>Fitur Utama</h3>
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> Real-time Mapping Service Area</li>
-                  <li><i class="bi bi-check-circle"></i> Optimalisasi Pencarian Bengkel Terdekat</li>
-                  <li><i class="bi bi-check-circle"></i> Integrasi Koordinasi Tim Operation Cabang</li>
+              <div class="mt-5">
+                <h3 class="h5 mb-3 text-accent"><i class="bi bi-stars"></i> Fitur Utama</h3>
+                <ul class="feature-list-pro">
+                  <li><i class="bi bi-check2-all me-2"></i> Visualisasi Geospasial Nasional</li>
+                  <li><i class="bi bi-check2-all me-2"></i> Filter Bengkel Terdekat Instan</li>
+                  <li><i class="bi bi-check2-all me-2"></i> Sistem Booking Terintegrasi</li>
+                  <li><i class="bi bi-check2-all me-2"></i> Koordinasi Tim Operation Cabang</li>
                 </ul>
               </div>
             </div>
@@ -67,5 +112,8 @@
       </div>
     </section>
   </main>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
