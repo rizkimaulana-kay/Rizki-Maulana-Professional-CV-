@@ -2950,3 +2950,22 @@ section,
     justify-content: center;
   }
 }
+
+.btn-cv-about {
+  background: var(--accent-color);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s;
+  border: 2px solid var(--accent-color);
+}
+
+.btn-cv-about:hover {
+  background: transparent;
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
