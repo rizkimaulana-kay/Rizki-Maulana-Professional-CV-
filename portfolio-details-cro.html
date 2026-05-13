@@ -16,72 +16,21 @@
   <style>
     .header { background: #101a20 !important; }
     
-    /* FIX NUKLIR: Kasih min-height biar box-nya GAK MUNGKIN kempes jadi hitam doang */
-    .portfolio-details-slider {
-      position: relative;
-      width: 100%;
-      min-height: 300px; 
-      border-radius: 15px;
-      overflow: hidden;
-      background: var(--surface-color);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }
-    
-    .portfolio-details-slider .swiper-slide img {
-      width: 100%;
-      height: auto; 
-      display: block;
-      border-radius: 15px;
-    }
-
-    .swiper-pagination {
-      position: relative !important;
-      margin-top: 15px;
-      padding-bottom: 10px;
-    }
-    
-    .swiper-pagination-bullet { background-color: rgba(255, 255, 255, 0.4) !important; }
-    .swiper-pagination-bullet-active { background-color: var(--accent-color) !important; }
-
-    /* Styling Kotak Info dan Deskripsi */
+    /* Styling Keterangan Proyek */
     .project-info {
       background: var(--surface-color);
       padding: 30px;
       border-radius: 15px;
       border: 1px solid rgba(255,255,255,0.1);
     }
-    .project-info h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
+    .project-info h3 { font-size: 22px; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 15px; }
     .project-info ul { list-style: none; padding: 0; font-size: 15px; }
-    .project-info ul li {
-      padding: 10px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .project-info ul li strong { color: var(--accent-color); }
+    .project-info ul li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .project-info ul li strong { color: var(--accent-color); display: block; margin-bottom: 5px; }
     
-    .description h2 { font-size: 28px; font-weight: 700; color: var(--accent-color); }
-    .description h4 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-top: 35px;
-      color: #fff;
-      border-left: 4px solid var(--accent-color);
-      padding-left: 15px;
-    }
-    .description p, .description li {
-      line-height: 1.8;
-      color: rgba(255,255,255,0.85);
-      text-align: justify;
-    }
-    .highlight-text { color: var(--accent-color); font-weight: 600; }
+    .description h2 { font-size: 28px; font-weight: 700; color: var(--accent-color); margin-bottom: 20px;}
+    .description h4 { font-size: 20px; font-weight: 700; margin-top: 30px; color: #fff; border-left: 4px solid var(--accent-color); padding-left: 15px; }
+    .description p, .description li { line-height: 1.8; color: rgba(255,255,255,0.85); text-align: justify; }
   </style>
 </head>
 
@@ -111,7 +60,7 @@
           
           <div class="col-lg-8">
             
-            <div class="portfolio-details-slider swiper init-swiper">
+            <div class="portfolio-details-slider swiper init-swiper rounded-4 shadow-lg" style="background: var(--surface-color);">
               <script type="application/json" class="swiper-config">
                 {
                   "loop": true,
@@ -124,19 +73,19 @@
               <div class="swiper-wrapper align-items-center">
                 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portofolio-4.jpg" alt="Outbound CRM AppSheet" onerror="this.src='https://dummyimage.com/800x400/101a20/1387c1&text=Cek+Nama+File:+portofolio-4.jpg'">
+                  <img src="assets/img/portfolio/portofolio-4.jpg" alt="Outbound CRM AppSheet" class="img-fluid w-100">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Chat-Mekari.jpg" alt="Inbound Chat Mekari" onerror="this.src='https://dummyimage.com/800x400/101a20/1387c1&text=Cek+Nama+File:+Chat-Mekari.jpg'">
+                  <img src="assets/img/portfolio/Chat-Mekari.jpg" alt="Inbound Chat Mekari" class="img-fluid w-100">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/CRM-Mekari.jpg" alt="Inbound CRM Mekari" onerror="this.src='https://dummyimage.com/800x400/101a20/1387c1&text=Cek+Nama+File:+CRM-Mekari.jpg'">
+                  <img src="assets/img/portfolio/CRM-Mekari.jpg" alt="Inbound CRM Mekari" class="img-fluid w-100">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Gsheet-full.png" alt="KPI Monitoring Dashboard" onerror="this.src='https://dummyimage.com/800x400/101a20/1387c1&text=Cek+Nama+File:+Gsheet-full.png'">
+                  <img src="assets/img/portfolio/Gsheet-full.png" alt="KPI Monitoring Dashboard" class="img-fluid w-100">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Gsheet-database.png" alt="Integrated Database" onerror="this.src='https://dummyimage.com/800x400/101a20/1387c1&text=Cek+Nama+File:+Gsheet-database.png'">
+                  <img src="assets/img/portfolio/Gsheet-database.png" alt="Integrated Database" class="img-fluid w-100">
                 </div>
 
               </div>
@@ -151,7 +100,7 @@
               <p>Sebelumnya, 8 CRO mengelola customer secara nasional dengan nomor pribadi, sehingga status <em>follow-up</em> aktual sulit dipantau manajemen. Banyak tiket dibuat tapi unit tidak jelas apakah sudah masuk bengkel atau belum.</p>
 
               <h4>Solusi Hibrida: Inbound & Outbound</h4>
-              <p>Menyadari <strong>Mekari</strong> hanya mencakup alur <span class="highlight-text">Inbound</span>, saya membangun sistem <span class="highlight-text">Outbound</span> mandiri menggunakan AppSheet.</p>
+              <p>Menyadari <strong>Mekari</strong> hanya mencakup alur Inbound, saya membangun sistem Outbound mandiri menggunakan AppSheet.</p>
               
               <p><strong>1. Sistem Inbound (Mekari):</strong> Menggunakan fitur chat real-time dan CRM tiket untuk menerima case awal.</p>
               <p><strong>2. Sistem Outbound (Custom Ecosystem):</strong> Awalnya berbasis GSheet dengan <em>Apps Script</em> & <em>Fonnte</em> untuk alert WA, lalu saya transformasikan ke <strong>AppSheet</strong> agar lebih mobile-friendly dan transparan dengan login pribadi masing-masing CRO.</p>
@@ -181,6 +130,12 @@
       </div>
     </section>
   </main>
+
+  <footer id="footer" class="footer">
+    <div class="container text-center py-4">
+      <p>© <strong>Rizki Maulana</strong>. All Rights Reserved</p>
+    </div>
+  </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
