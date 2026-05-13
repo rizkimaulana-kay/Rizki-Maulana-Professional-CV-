@@ -16,22 +16,20 @@
   <style>
     .header { background: #101a20 !important; }
     
-    /* FIX: Memastikan Slider dan Gambar Tampil Sempurna */
     .portfolio-details-slider {
       position: relative;
       width: 100%;
       border-radius: 15px;
       overflow: hidden;
-      background: var(--surface-color); /* Ganti dari hitam pekat jadi warna tema lu */
+      background: var(--surface-color);
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
     
-    /* FIX: Memaksa gambar di dalam slider untuk muncul dan memenuhi area */
+    /* FIX 1: Ubah height jadi auto biar gambar tidak kolaps */
     .portfolio-details-slider .swiper-slide img {
       width: 100%;
-      height: 100%; /* Memastikan tinggi menyesuaikan container */
-      object-fit: cover; /* Agar gambar tidak gepeng */
-      display: block; /* Harus di-block agar terbaca render engine */
+      height: auto !important; 
+      display: block;
       border-radius: 15px;
     }
 
@@ -133,16 +131,16 @@
                   <img src="assets/img/portfolio/portofolio-4.jpg" alt="Outbound CRM AppSheet">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Chat Mekari.jpg" alt="Inbound Chat Mekari">
+                  <img src="assets/img/portfolio/Chat%20Mekari.jpg" alt="Inbound Chat Mekari">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/CRM Mekari.jpg" alt="Inbound CRM Mekari">
+                  <img src="assets/img/portfolio/CRM%20Mekari.jpg" alt="Inbound CRM Mekari">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Gsheet full.png" alt="KPI Monitoring Dashboard">
+                  <img src="assets/img/portfolio/Gsheet%20full.png" alt="KPI Monitoring Dashboard">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Gsheet database.png" alt="Integrated Database">
+                  <img src="assets/img/portfolio/Gsheet%20database.png" alt="Integrated Database">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -201,7 +199,7 @@
           delay: 4000, 
           disableOnInteraction: false 
         },
-        slidesPerView: 1, /* Paksa nampilin 1 gambar penuh */
+        slidesPerView: 1, 
         pagination: { 
           el: '.swiper-pagination', 
           type: 'bullets', 
