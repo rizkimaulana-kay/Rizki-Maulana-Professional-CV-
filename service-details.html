@@ -10,14 +10,24 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
+    /* Paksa Header Solid di Page ini */
     .header { background: #101a20 !important; }
-    /* Styling dropdown agar match dengan dark theme */
-    .form-select option { background-color: #141f26; color: white; }
-    .form-control:focus, .form-select:focus { 
-      background-color: rgba(255,255,255,0.05); 
-      color: white; 
-      border-color: var(--accent-color); 
-      box-shadow: none;
+    
+    /* Perbaikan visibilitas blok input agar kelihatan jelas */
+    .custom-input {
+      background: transparent !important;
+      color: white !important;
+      border: 1px solid rgba(255, 255, 255, 0.4) !important; /* Border lebih kontras */
+      border-radius: 8px !important;
+    }
+    
+    .custom-input::placeholder {
+      color: rgba(255, 255, 255, 0.6) !important; /* Warna placeholder lebih terang */
+    }
+
+    .form-select.custom-input option {
+      background-color: #1a2c38;
+      color: white;
     }
   </style>
 </head>
@@ -90,24 +100,24 @@
               
               <form action="#" class="php-email-form mb-4">
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Nama Anda" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
+                  <input type="text" class="form-control custom-input" placeholder="Nama Anda">
                 </div>
                 <div class="mb-3">
-                  <input type="email" class="form-control" placeholder="Email Anda" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
+                  <input type="email" class="form-control custom-input" placeholder="Email Anda">
                 </div>
                 
                 <div class="mb-3">
-                  <select class="form-select" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);">
+                  <select class="form-select custom-input">
                     <option selected disabled>Layanan yang diinginkan</option>
                     <option value="web">Web Development</option>
                     <option value="app">Mobile App Development</option>
                     <option value="maintenance">Web Maintenance</option>
                     <option value="marketing">Digital Marketing Strategy</option>
-                  </select>
+                    <option value="others">Lainnya</option> </select>
                 </div>
 
                 <div class="mb-3">
-                  <textarea class="form-control" rows="3" placeholder="Ceritakan kebutuhan Anda" style="background: transparent; color: white; border-color: rgba(255,255,255,0.2);"></textarea>
+                  <textarea class="form-control custom-input" rows="3" placeholder="Ceritakan kebutuhan Anda"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-100 mb-3">Kirim Pesan</button>
               </form>
