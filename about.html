@@ -4,59 +4,58 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - Rizki Maulana | Digital Solution Expert</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
+  <title>About - Rizki Maulana | Customer Relation & Operation Development</title>
+  
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
   <link href="assets/css/main.css" rel="stylesheet">
   
   <style>
-    /* Custom Styling for About Page */
-    .btn-cv-about {
-      background: var(--accent-color);
-      color: white;
-      padding: 12px 25px;
-      border-radius: 50px;
+    /* Paksa Header Solid */
+    .header { background: #101a20 !important; }
+    
+    /* Perbaikan Skill Box - Huruf dikecilkan agar border tetap rapi */
+    .skill-box {
+      padding: 1.5rem !important;
+      height: 100%;
+    }
+    .skill-box h3 {
+      font-size: 0.95rem !important; /* Huruf judul skill lebih kecil */
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .skill-box p {
+      font-size: 0.8rem !important; /* Huruf deskripsi lebih kecil */
+      line-height: 1.4;
+      margin-bottom: 12px;
+      color: rgba(255,255,255,0.6);
+    }
+    .skill-box .progress-label {
+      font-size: 0.75rem;
       font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      transition: 0.3s;
-      border: 2px solid var(--accent-color);
     }
-    .btn-cv-about:hover {
-      background: transparent;
-      color: var(--accent-color);
-      transform: translateY(-3px);
-    }
+
     .profile-photo {
-      border: 8px solid rgba(255, 255, 255, 0.05);
+      max-width: 90%; /* Foto nggak boleh kegedean */
+      border: 6px solid rgba(19, 135, 193, 0.1);
       transition: 0.5s;
     }
     .profile-photo:hover {
-      transform: scale(1.02);
       border-color: var(--accent-color);
-    }
-    .floating-badge {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
+      transform: translateY(-5px);
     }
     .intro-content p {
       text-align: justify;
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
   </style>
 </head>
@@ -73,12 +72,12 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="https://www.dopagency.my.id/" target="_blank" style="background: var(--accent-color); color: white; padding: 8px 15px; border-radius: 50px; margin-left: 15px; font-weight: 600;">Visit DOP Agency <i class="bi bi-arrow-up-right-circle ms-1"></i></a></li>
+          <li><a href="https://www.dopagency.my.id/" target="_blank" style="background: var(--accent-color); color: white; padding: 8px 20px; border-radius: 50px; margin-left: 15px; font-weight: 600;">Visit DOP Agency <i class="bi bi-arrow-up-right-circle ms-1"></i></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
       <div class="header-social-links">
-        <a href="https://www.instagram.com/rizkimaulanaa/" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.instagram.com/rizkimaulanaa" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
   </header>
@@ -87,7 +86,7 @@
     <section id="about" class="about section">
       <div class="container section-title" data-aos="fade-up">
         <h2>About Me</h2>
-        <p>Strategis Komunikasi Pemasaran, Analyst Customer Dispute dan Pengembangan Sistem Operasional.</p>
+        <p>Menghubungkan efisiensi operasional dengan solusi digital strategis.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -95,48 +94,40 @@
           
           <div class="col-lg-7 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="150">
             <div class="intro-content">
-              <span class="eyebrow">Marketing Communication & Digital Specialist</span>
-              <h2 class="headline">Menghadirkan Solusi Digital Strategis & Efisiensi Operasional Terintegrasi.</h2>
+              <span class="eyebrow" style="color: var(--accent-color); font-weight: 700; letter-spacing: 1px;">THE PROBLEM SOLVER</span>
+              <h2 class="headline mt-2 mb-4" style="font-weight: 700;">Customer Relation & Operation Development Expert.</h2>
               
-              <p class="lead">
-                Saat ini saya memimpin strategi di <strong>DOP Agency (Side Job)</strong> dengan spesialisasi konsultasi <strong>Website, Mobile Apps, dan Maintenance</strong>. Namun, saya juga sedang membuka peluang karier <strong>full-time</strong> untuk berkontribusi sebagai kandidat strategis yang membawa perspektif bisnis luas serta eksekusi teknis yang presisi.
+              <p>
+                Saya adalah seorang profesional yang berfokus pada **Customer Relation dan Operation Development**. Karier saya dibangun di atas kemampuan menganalisis masalah operasional yang kompleks dan mengubahnya menjadi sistem digital yang efisien.
               </p>
 
               <p>
-                Fondasi karier saya sebagai <strong>Operation Development di PT Indomobil Bussan Trucking</strong> menjadi bukti kapabilitas saya dalam mengorkestrasi sistem. Melalui pemanfaatan <strong>Spreadsheet, Apps Script, dan App Sheet</strong>, saya sukses membangun infrastruktur <strong>Dashboard CRM</strong> dan Monitoring Performance yang terintegrasi, serta menjembatani kolaborasi data antar divisi secara efisien.
+                Saat ini, saya menjabat sebagai **Marketing Communication Lead di DOP Agency**, di mana saya mengombinasikan logika operasional dengan strategi pemasaran. Saya tidak hanya mencari klien, tetapi juga memberikan konsultasi mendalam untuk solusi **Website Development, Maintenance, perbaikan sistem, hingga perancangan Mobile Apps**.
               </p>
               
               <p>
-                Saya percaya sinergi antara <strong>logika analitis</strong> dan <strong>kreativitas bisnis</strong> adalah kunci untuk menciptakan transparansi dan efisiensi yang berdampak nyata. Saya siap menjadi aset strategis yang membantu perusahaan Anda tumbuh lebih cepat, rapi, dan terorganisir.
+                Dengan latar belakang kuat sebagai **Dispute Analyst dan Ops Dev**, saya terbiasa mengelola data nasional menggunakan **Spreadsheet, Apps Script, dan AppSheet** untuk membangun Dashboard CRM yang transparan dan *real-time*. Saya percaya bahwa sistem yang rapi adalah kunci kepuasan pelanggan yang berkelanjutan.
               </p>
 
               <div class="cta-group d-flex flex-wrap gap-3 mt-4">
-                <a href="assets/docs/Profesional_CV_Rizki_Maulana.pdf" class="btn-cv-about" target="_blank">
+                <a href="assets/docs/Profesional_CV_Rizki_Maulana.pdf" class="btn btn-primary rounded-pill px-4" target="_blank">
                   <i class="bi bi-file-earmark-pdf me-2"></i>Download My CV
                 </a>
-                <a href="portfolio.html" class="btn-ghost">
-                  View Portfolio <i class="bi bi-arrow-up-right"></i>
-                </a>
-              </div>
-              
-              <div class="mt-4">
-                <a href="https://www.dopagency.my.id/" target="_blank" class="link-underline">
-                  Check my Agency: DOP Agency <i class="bi bi-link-45deg"></i>
+                <a href="portfolio.html" class="btn btn-outline rounded-pill px-4">
+                  Lihat Karya <i class="bi bi-arrow-right ms-2"></i>
                 </a>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-5 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="250">
-            <div class="position-relative">
-              <figure class="profile-figure text-center">
-                <img src="assets/img/profile/profile-square-11.webp" alt="Rizki Maulana" class="img-fluid profile-photo rounded-4 shadow-lg">
-                <div class="floating-badge">
-                  <div class="badge bg-success text-white p-2 px-3 rounded-pill shadow-sm" style="font-size: 0.85rem;">
-                    <i class="bi bi-briefcase-fill me-1"></i> Open to Work
-                  </div>
+          <div class="col-lg-5 order-1 order-lg-2 text-center" data-aos="zoom-in" data-aos-delay="250">
+            <div class="position-relative d-inline-block">
+              <img src="assets/img/profile/profile-square-11.webp" alt="Rizki Maulana" class="img-fluid profile-photo rounded-4 shadow-lg">
+              <div class="position-absolute bottom-0 end-0 mb-3 me-3">
+                <div class="badge bg-primary text-white p-2 px-3 rounded-pill shadow-lg">
+                  <i class="bi bi-patch-check-fill me-1"></i> Digital Solution Expert
                 </div>
-              </figure>
+              </div>
             </div>
           </div>
 
@@ -144,52 +135,71 @@
       </div>
     </section>
 
-    <section id="skills" class="skills section">
-      <div class="row g-4 skills-animation">
-  <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-    <div class="skill-box">
-      <h3>Marcom & Sales</h3>
-      <p>Consultation & Client Acquisition.</p>
-      <span class="text-end d-block">80%</span>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
-  </div>
+    <section id="skills" class="skills section light-background">
+      <div class="container">
+        <div class="row g-4">
+          
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-box card border-0 p-4 shadow-sm h-100" style="background: var(--surface-color);">
+              <i class="bi bi-people-fill mb-3" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+              <h3>Customer Relation</h3>
+              <p>Service Excellence, Accuracy, & Rapid Response Analyst.</p>
+              <div class="d-flex justify-content-between progress-label">
+                <span>Expertise</span>
+                <span>95%</span>
+              </div>
+              <div class="progress mt-2">
+                <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
 
-  <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-    <div class="skill-box">
-      <h3>Digital Ecosystem</h3>
-      <p>Web, Apps, & Maintenance Lead.</p>
-      <span class="text-end d-block">75%</span>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
-  </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-box card border-0 p-4 shadow-sm h-100" style="background: var(--surface-color);">
+              <i class="bi bi-gear-wide-connected mb-3" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+              <h3>Operation Dev</h3>
+              <p>Automasi Dashboard CRM & Sistem Monitoring Kerja.</p>
+              <div class="d-flex justify-content-between progress-label">
+                <span>Expertise</span>
+                <span>85%</span>
+              </div>
+              <div class="progress mt-2">
+                <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
 
-  <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-    <div class="skill-box">
-      <h3>Data Automation</h3>
-      <p>Spreadsheet & Apps Script</p>
-      <span class="text-end d-block">75%</span>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
-  </div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-box card border-0 p-4 shadow-sm h-100" style="background: var(--surface-color);">
+              <i class="bi bi-code-square mb-3" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+              <h3>Digital Solutions</h3>
+              <p>Web Maintenance, Apps Script, & Mobile Dev Consultant.</p>
+              <div class="d-flex justify-content-between progress-label">
+                <span>Expertise</span>
+                <span>80%</span>
+              </div>
+              <div class="progress mt-2">
+                <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
 
-<div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-  <div class="skill-box">
-    <h3>Dispute & Relation Specialist</h3>
-    <p>Service Excellence, Accuracy, & Rapid Response.</p>
-    <span class="text-end d-block">95%</span>
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-    </div>
-  </div>
-</div>
+          <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-box card border-0 p-4 shadow-sm h-100" style="background: var(--surface-color);">
+              <i class="bi bi-megaphone-fill mb-3" style="font-size: 1.5rem; color: var(--accent-color);"></i>
+              <h3>Marcom Strategy</h3>
+              <p>B2B Client Acquisition & Digital Communication.</p>
+              <div class="d-flex justify-content-between progress-label">
+                <span>Expertise</span>
+                <span>80%</span>
+              </div>
+              <div class="progress mt-2">
+                <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   </main>
@@ -209,6 +219,7 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>AOS.init();</script>
 </body>
 
 </html>
