@@ -118,8 +118,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Portfolio (Kodingan Sakti Sejajar & Overlay Tengah)
+# Portfolio Section
 --------------------------------------------------------------*/
+/* 1. Styling Filter (Agar ada border dan berbentuk kapsul) */
+.portfolio .portfolio-filters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio .portfolio-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 22px;
+  margin: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--default-color);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active {
+  color: #fff;
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* 2. Paksa Kotak Portofolio Sama Rata (Tinggi Sejajar) */
 .portfolio-item .portfolio-card {
   height: 100% !important;
   display: flex !important;
@@ -127,10 +159,12 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--surface-color);
   border-radius: 12px;
   overflow: hidden;
+  transition: 0.3s;
 }
 
+/* 3. Paksa Gambar Konsisten (Crop Otomatis agar tidak gepeng) */
 .portfolio-item .portfolio-img {
-  height: 280px !important;
+  height: 260px !important; /* Tinggi gambar seragam */
   position: relative;
   overflow: hidden;
 }
@@ -138,9 +172,11 @@ h1, h2, h3, h4, h5, h6 {
 .portfolio-item .portfolio-img img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
+  object-fit: cover !important; /* Ini kuncinya biar gambar rapi */
+  transition: 0.5s;
 }
 
+/* 4. Overlay & Ikon Pas di Tengah */
 .portfolio-item .portfolio-overlay {
   position: absolute;
   inset: 0;
@@ -153,16 +189,41 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s ease;
 }
 
-.portfolio-card:hover .portfolio-overlay { opacity: 1; }
-
-.portfolio-overlay a {
-  width: 45px; height: 45px;
-  background: var(--accent-color);
-  color: white; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
 }
 
-.portfolio-info { padding: 20px; flex-grow: 1; }
+.portfolio-overlay a {
+  width: 45px;
+  height: 45px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* 5. Merapikan Info di Bawah Gambar */
+.portfolio-info {
+  padding: 20px;
+  flex-grow: 1 !important; /* Memastikan kotak info mengisi sisa ruang agar tinggi kartu sama */
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-info h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.portfolio-info p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 10px;
+}
 
 /*--------------------------------------------------------------
 # CUSTOM ADD-ONS (Fitur Terbaru Semua Page)
