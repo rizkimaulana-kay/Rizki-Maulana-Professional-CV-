@@ -22,9 +22,22 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <style>
     .header { background: #101a20 !important; }
-    .service-item { transition: 0.4s; height: 100%; }
-    .service-item:hover { transform: translateY(-10px); }
+    .service-item { transition: 0.4s; height: 100%; border: 1px solid rgba(255,255,255,0.05); }
+    .service-item:hover { transform: translateY(-10px); border-color: var(--accent-color); }
     .highlight-card { border: 1px solid var(--accent-color) !important; }
+    
+    /* FIX: Mencerahkan tulisan keterangan agar terbaca jelas */
+    .service-content p { 
+      color: rgba(255, 255, 255, 0.7) !important; 
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    
+    /* Warna judul agar lebih stand out */
+    .service-content h3 {
+      color: #ffffff !important;
+      margin-bottom: 15px;
+    }
   </style>
 </head>
 
@@ -71,7 +84,7 @@
                 </div>
                 <div class="service-content">
                   <h3 class="h4">Digital Solution & Marcom <span class="badge bg-primary ms-2" style="font-size: 0.65rem;">Lead @ DOP Agency</span></h3>
-                  <p class="text-muted">Konsultasi strategis pembuatan & maintenance Website, perbaikan sistem, pengembangan Mobile Apps, hingga manajemen komunikasi digital untuk memperkuat branding bisnis Anda.</p>
+                  <p>Konsultasi strategis pembuatan & maintenance Website, perbaikan sistem, pengembangan Mobile Apps, hingga manajemen komunikasi digital untuk memperkuat branding bisnis Anda.</p>
                   <span class="read-more" style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem;">Lihat Detail Solusi <i class="bi bi-arrow-right"></i></span>
                 </div>
               </div>
@@ -85,7 +98,7 @@
               </div>
               <div class="service-content">
                 <h3 class="h4">Data & Dashboard System</h3>
-                <p class="text-muted">Membangun infrastruktur pelaporan dan monitoring kinerja menggunakan Google Spreadsheet & Apps Script. Fokus pada otomasi data real-time untuk pengambilan keputusan yang lebih cepat.</p>
+                <p>Membangun infrastruktur pelaporan dan monitoring kinerja menggunakan Google Spreadsheet & Apps Script. Fokus pada otomasi data real-time untuk pengambilan keputusan yang lebih cepat.</p>
               </div>
             </div>
           </div>
@@ -97,7 +110,7 @@
               </div>
               <div class="service-content">
                 <h3 class="h4">Operational Leadership</h3>
-                <p class="text-muted">Mengorkestrasi alur kerja lintas divisi, pemetaan vendor nasional, dan memastikan operasional berjalan sesuai SOP guna mencapai efisiensi biaya serta waktu.</p>
+                <p>Mengorkestrasi alur kerja lintas divisi, pemetaan vendor nasional, dan memastikan operasional berjalan sesuai SOP guna mencapai efisiensi biaya serta waktu.</p>
               </div>
             </div>
           </div>
@@ -109,7 +122,7 @@
               </div>
               <div class="service-content">
                 <h3 class="h4">Dispute & Risk Analysis</h3>
-                <p class="text-muted">Menganalisis sengketa pelanggan dengan pendekatan mediasi berbasis data. Mitigasi risiko operasional untuk menjaga kredibilitas dan stabilitas layanan perusahaan.</p>
+                <p>Menganalisis sengketa pelanggan dengan pendekatan mediasi berbasis data. Mitigasi risiko operasional untuk menjaga kredibilitas dan stabilitas layanan perusahaan.</p>
               </div>
             </div>
           </div>
@@ -121,7 +134,7 @@
               </div>
               <div class="service-content">
                 <h3 class="h4">Asset & Fleet Maintenance</h3>
-                <p class="text-muted">Manajemen aset strategis melalui monitoring pemeliharaan rutin. Mengevaluasi performa teknis secara berkala untuk meminimalkan downtime operasional.</p>
+                <p>Manajemen aset strategis melalui monitoring pemeliharaan rutin. Mengevaluasi performa teknis secara berkala untuk meminimalkan downtime operasional.</p>
               </div>
             </div>
           </div>
@@ -133,7 +146,7 @@
               </div>
               <div class="service-content">
                 <h3 class="h4">Creative Audio Production</h3>
-                <p class="text-muted">Eksplorasi produksi audio kreatif yang memberikan sentuhan unik dalam setiap konten visual dan branding yang saya kembangkan untuk klien.</p>
+                <p>Eksplorasi produksi audio kreatif yang memberikan sentuhan unik dalam setiap konten visual dan branding yang saya kembangkan untuk klien.</p>
               </div>
             </div>
           </div>
