@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Case Study: CRO Ecosystem - Rizki Maulana</title>
+  <title>Case Study: National CRO Ecosystem - Rizki Maulana</title>
   
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -15,61 +15,51 @@
   
   <style>
     .header { background: #101a20 !important; }
-    .portfolio-details-slider img {
-      width: 100%;
+    
+    /* Swiper Styling - Memastikan Slider Aktif */
+    .portfolio-details-slider {
+      position: relative;
+      overflow: hidden;
       border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      background: #000;
     }
+    .swiper-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 15px;
+    }
+    .swiper-pagination {
+      position: relative !important;
+      margin-top: 20px;
+    }
+
     .project-info {
       background: var(--surface-color);
       padding: 30px;
       border-radius: 15px;
       border: 1px solid rgba(255,255,255,0.1);
     }
-    .project-info h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .project-info ul {
-      list-style: none;
-      padding: 0;
-      font-size: 15px;
-    }
-    .project-info ul li {
-      padding: 10px 0;
-      display: flex;
-      justify-content: space-between;
-    }
-    .project-info ul li strong {
-      color: var(--accent-color);
-    }
+    
     .description h2 {
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 700;
-      margin-bottom: 20px;
       color: var(--accent-color);
     }
     .description h4 {
       font-size: 20px;
-      font-weight: 600;
-      margin-top: 30px;
-      margin-bottom: 15px;
+      font-weight: 700;
+      margin-top: 35px;
+      color: #fff;
+      border-left: 4px solid var(--accent-color);
+      padding-left: 15px;
     }
-    .description p {
+    .description p, .description li {
       line-height: 1.8;
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255,255,255,0.85);
       text-align: justify;
     }
-    .description ul {
-      padding-left: 20px;
-      color: rgba(255, 255, 255, 0.8);
-    }
-    .description ul li {
-      margin-bottom: 10px;
-    }
+    .highlight-text { color: var(--accent-color); font-weight: 600; }
   </style>
 </head>
 
@@ -92,101 +82,37 @@
   </header>
 
   <main class="main">
-
-    <div class="page-title" data-aos="fade">
-      <div class="container">
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Portfolio Details</li>
-          </ol>
-        </nav>
-        <h1>National CRO Ecosystem</h1>
-      </div>
-    </div>
-
     <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up">
         <div class="row gy-4">
 
           <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
+            <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portofolio-4.jpg" alt="Outbound CRM AppSheet Mobile">
-                  <p class="text-center mt-2 small text-muted">Outbound CRM: AppSheet Mobile Interface</p>
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Chat-Mekari.jpg" alt="Inbound Chat Mekari">
-                  <p class="text-center mt-2 small text-muted">Inbound Chat: Mekari Dashboard</p>
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/CRM-Mekari.jpg" alt="Inbound CRM Ticket Mekari">
-                  <p class="text-center mt-2 small text-muted">Inbound CRM: Ticket System Mekari</p>
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Gsheet-full.png" alt="Management KPI Monitoring GSheet">
-                  <p class="text-center mt-2 small text-muted">Real-time KPI Monitoring Dashboard (Google Sheets)</p>
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Gsheet-database.png" alt="Integrated Database AppSheet">
-                  <p class="text-center mt-2 small text-muted">Centralized Database: Integrated with AppSheet & Apps Script</p>
-                </div>
-
+                <div class="swiper-slide"><img src="assets/img/portfolio/portofolio-4.jpg" alt="Outbound CRM AppSheet"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/Chat Mekari.jpg" alt="Inbound Chat Mekari"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/CRM Mekari.jpg" alt="Inbound CRM Mekari"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/Gsheet full.png" alt="KPI Monitoring Dashboard"></div>
+                <div class="swiper-slide"><img src="assets/img/portfolio/Gsheet database.png" alt="Integrated Database"></div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
 
             <div class="description mt-5">
-              <h2>Transforming National CRO Operations</h2>
-              <p>
-                Proyek ini berfokus pada digitalisasi dan sentralisasi operasional <strong>Customer Relation Officer (CRO)</strong> di <strong>PT Indomobil Bussan Trucking (IBT)</strong> secara nasional. Dari sistem komunikasi yang terfragmentasi menjadi ekosistem CRM terpadu.
-              </p>
+              <h2>Sentralisasi & Otomasi Operasional CRO Nasional</h2>
+              <p>Proyek ini mentransformasi sistem <strong>Customer Relation Officer (CRO)</strong> di <strong>PT IBT</strong> dari cara manual menggunakan WhatsApp pribadi menjadi ekosistem CRM terpusat.</p>
 
-              <h4>1. The Challenge (Tantangan)</h4>
-              <p>
-                Sebelumnya, monitoring penanganan unit di bengkel sangat sulit dilakukan karena setiap CRO menggunakan nomor WhatsApp pribadi. Tiket di sistem sering menumpuk tanpa kejelasan status <em>follow-up</em> aktual, menciptakan "blind spot" bagi pihak manajemen.
-              </p>
+              <h4>Tantangan & Masalah Utama</h4>
+              <p>Sebelumnya, 8 CRO mengelola customer secara nasional dengan nomor pribadi, sehingga status <em>follow-up</em> aktual sulit dipantau manajemen. Banyak tiket dibuat tapi unit tidak jelas apakah sudah masuk bengkel atau belum.</p>
 
-              <h4>2. The Strategy (Strategi & Pengembangan)</h4>
-              <p>
-                Sebagai Project Manager untuk Outbound CRM, saya merancang solusi hibrida ketika vendor sistem (Mekari) hanya mencakup alur Inbound. Saya membangun sistem operasional berbasis <strong>AppSheet</strong> yang terintegrasi dengan <strong>Google Sheets</strong> dan <strong>Apps Script</strong>.
-              </p>
-              <ul>
-                <li><strong>Otomasi:</strong> Penggunaan Apps Script untuk sinkronisasi data real-time dan Fonnte untuk <em>auto-reminder</em>.</li>
-                <li><strong>Transparansi:</strong> Perpindahan data otomatis saat status <em>Closed/Done</em> agar beban kerja tetap fokus.</li>
-                <li><strong>Hardware Control:</strong> Pengadaan ponsel khusus untuk standarisasi komunikasi tim Outbound.</li>
-              </ul>
+              <h4>Solusi Hibrida: Inbound & Outbound</h4>
+              <p>Menyadari <strong>Mekari</strong> hanya mencakup alur <span class="highlight-text">Inbound</span>, saya membangun sistem <span class="highlight-text">Outbound</span> mandiri menggunakan AppSheet.</p>
+              
+              <p><strong>1. Sistem Inbound (Mekari):</strong> Menggunakan fitur chat real-time dan CRM tiket untuk menerima case awal.</p>
+              <p><strong>2. Sistem Outbound (Custom Ecosystem):</strong> Awalnya berbasis GSheet dengan <em>Apps Script</em> & <em>Fonnte</em> untuk alert WA, lalu saya transformasikan ke <strong>AppSheet</strong> agar lebih mobile-friendly dan transparan dengan login pribadi masing-masing CRO.</p>
 
-              <h4>3. The Solution (Solusi Terintegrasi)</h4>
-              <p>
-                Membangun ekosistem yang dapat diakses melalui Mobile, Tablet, maupun PC. Setiap tugas yang di-assign akan langsung muncul di dashboard pribadi CRO masing-masing, memungkinkan supervisor melakukan monitoring <em>Aging Case</em> secara proaktif.
-              </p>
-
-              <h4>4. The Result (Hasil Akhir)</h4>
-              <p>
-                Implementasi berhasil memisahkan alur kerja menjadi dua pilar yang terukur: <strong>CRO Inbound & Outbound</strong>. Kini, manajemen memiliki visibilitas penuh terhadap KPI tim, jumlah pending case, dan durasi penyelesaian setiap kasus secara nasional.
-              </p>
+              <h4>Hasil Akhir & Dampak</h4>
+              <p>Supervisor kini bisa memantau <em>Aging Case</em> secara real-time. KPI tim, jumlah pending case, dan solved case kini terpampang nyata di dashboard tanpa perlu input manual yang melelahkan.</p>
             </div>
           </div>
 
@@ -194,41 +120,35 @@
             <div class="project-info">
               <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong> <span>Operation Development</span></li>
-                <li><strong>Client</strong> <span>PT Indomobil Bussan Trucking</span></li>
-                <li><strong>Project Date</strong> <span>2025 - 2026</span></li>
-                <li><strong>Tech Stack</strong> <span>AppSheet, Apps Script, GSheet</span></li>
-                <li><strong>Project URL</strong> <a href="#" style="color: var(--accent-color);">Internal System</a></li>
+                <li><strong>Kategori:</strong> <span>Operation Development</span></li>
+                <li><strong>Instansi:</strong> <span>PT Indomobil Bussan Trucking</span></li>
+                <li><strong>Role:</strong> <span>Project Manager (Outbound System)</span></li>
+                <li><strong>Tech Stack:</strong> <span>AppSheet, Apps Script, GSheet, Mekari</span></li>
               </ul>
               <div class="mt-4">
-                <a href="portfolio.html" class="btn btn-outline w-100" style="border-radius: 50px;">Back to Portfolio</a>
+                <a href="portfolio.html" class="btn btn-outline w-100" style="border-radius: 50px;">Kembali</a>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
   </main>
-
-  <footer id="footer" class="footer">
-    <div class="container text-center">
-      <p>© <strong>Rizki Maulana</strong>. All Rights Reserved</p>
-    </div>
-  </footer>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
+
   <script>
-    AOS.init({
-      duration: 1000,
-      once: true
+    document.addEventListener('DOMContentLoaded', function() {
+      new Swiper('.portfolio-details-slider', {
+        speed: 600, loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        slidesPerView: 'auto',
+        pagination: { el: '.swiper-pagination', type: 'bullets', clickable: true }
+      });
     });
   </script>
-
 </body>
 </html>
