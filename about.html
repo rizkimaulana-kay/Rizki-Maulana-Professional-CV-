@@ -19,21 +19,19 @@
   <link href="assets/css/main.css" rel="stylesheet">
   
   <style>
-    /* Paksa Header Solid */
     .header { background: #101a20 !important; }
     
-    /* Perbaikan Skill Box - Huruf dikecilkan agar border tetap rapi */
     .skill-box {
       padding: 1.5rem !important;
       height: 100%;
     }
     .skill-box h3 {
-      font-size: 0.95rem !important; /* Huruf judul skill lebih kecil */
+      font-size: 0.95rem !important;
       font-weight: 700;
       margin-bottom: 8px;
     }
     .skill-box p {
-      font-size: 0.8rem !important; /* Huruf deskripsi lebih kecil */
+      font-size: 0.8rem !important;
       line-height: 1.4;
       margin-bottom: 12px;
       color: rgba(255,255,255,0.6);
@@ -44,7 +42,7 @@
     }
 
     .profile-photo {
-      max-width: 90%; /* Foto nggak boleh kegedean */
+      max-width: 90%;
       border: 6px solid rgba(19, 135, 193, 0.1);
       transition: 0.5s;
     }
@@ -52,10 +50,17 @@
       border-color: var(--accent-color);
       transform: translateY(-5px);
     }
+    /* Biar teks lebih enak dibaca dan nggak kaku */
     .intro-content p {
-      text-align: justify;
-      font-size: 0.95rem;
-      line-height: 1.7;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 20px;
+    }
+    strong {
+      color: var(--accent-color);
+      font-weight: 600;
     }
   </style>
 </head>
@@ -86,7 +91,7 @@
     <section id="about" class="about section">
       <div class="container section-title" data-aos="fade-up">
         <h2>About Me</h2>
-        <p>Menghubungkan efisiensi operasional dengan solusi digital strategis.</p>
+        <p>Menjembatani manajemen hubungan pelanggan dengan efisiensi sistem operasional.</p>
       </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -94,19 +99,19 @@
           
           <div class="col-lg-7 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="150">
             <div class="intro-content">
-              <span class="eyebrow" style="color: var(--accent-color); font-weight: 700; letter-spacing: 1px;">THE PROBLEM SOLVER</span>
-              <h2 class="headline mt-2 mb-4" style="font-weight: 700;">Customer Relation & Operation Development Expert.</h2>
+              <span class="eyebrow" style="color: var(--accent-color); font-weight: 700; letter-spacing: 1px;">MY PERSPECTIVE</span>
+              <h2 class="headline mt-2 mb-4" style="font-weight: 700; line-height: 1.3;">Saya percaya bahwa sistem yang rapi adalah kunci utama kepuasan pelanggan.</h2>
               
               <p>
-                Saya adalah seorang profesional yang berfokus pada **Customer Relation dan Operation Development**. Karier saya dibangun di atas kemampuan menganalisis masalah operasional yang kompleks dan mengubahnya menjadi sistem digital yang efisien.
+                Perjalanan karier saya didorong oleh satu tujuan utama: <strong>menyederhanakan hal yang rumit</strong>. Sebagai spesialis di bidang <strong>Customer Relation</strong> dan <strong>Operation Development</strong>, saya terbiasa membedah masalah operasional yang berantakan lalu menyusunnya kembali menjadi sistem digital yang efisien dan mudah dikelola.
               </p>
 
               <p>
-                Saat ini, saya menjabat sebagai **Marketing Communication Lead di DOP Agency**, di mana saya mengombinasikan logika operasional dengan strategi pemasaran. Saya tidak hanya mencari klien, tetapi juga memberikan konsultasi mendalam untuk solusi **Website Development, Maintenance, perbaikan sistem, hingga perancangan Mobile Apps**.
+                Di <strong>DOP Agency</strong>, peran saya melampaui sekadar <strong>Marketing Communication Lead</strong>. Saya bertindak sebagai jembatan strategis yang menggabungkan logika operasional dengan kebutuhan pasar. Saya tidak hanya mendatangkan klien, tapi juga mendampingi mereka melalui konsultasi mendalam—mulai dari <strong>pengembangan website, perbaikan sistem (maintenance)</strong>, hingga perancangan <strong>Mobile Apps</strong> yang tepat guna.
               </p>
               
               <p>
-                Dengan latar belakang kuat sebagai **Dispute Analyst dan Ops Dev**, saya terbiasa mengelola data nasional menggunakan **Spreadsheet, Apps Script, dan AppSheet** untuk membangun Dashboard CRM yang transparan dan *real-time*. Saya percaya bahwa sistem yang rapi adalah kunci kepuasan pelanggan yang berkelanjutan.
+                Bekal saya sebagai <strong>Dispute Analyst</strong> dan <strong>Ops Dev</strong> mengasah ketelitian saya dalam mengelola data berskala besar. Dengan dukungan alat seperti <strong>Spreadsheet, Apps Script, dan AppSheet</strong>, saya fokus membangun dashboard CRM yang transparan dan bisa dipantau secara real-time. Bagi saya, teknologi harus menjadi solusi yang memperkuat hubungan manusia, bukan malah membuatnya makin sulit.
               </p>
 
               <div class="cta-group d-flex flex-wrap gap-3 mt-4">
@@ -114,7 +119,7 @@
                   <i class="bi bi-file-earmark-pdf me-2"></i>Download My CV
                 </a>
                 <a href="portfolio.html" class="btn btn-outline rounded-pill px-4">
-                  Lihat Karya <i class="bi bi-arrow-right ms-2"></i>
+                  Eksplorasi Proyek <i class="bi bi-arrow-right ms-2"></i>
                 </a>
               </div>
             </div>
@@ -124,8 +129,8 @@
             <div class="position-relative d-inline-block">
               <img src="assets/img/profile/profile-square-11.webp" alt="Rizki Maulana" class="img-fluid profile-photo rounded-4 shadow-lg">
               <div class="position-absolute bottom-0 end-0 mb-3 me-3">
-                <div class="badge bg-primary text-white p-2 px-3 rounded-pill shadow-lg">
-                  <i class="bi bi-patch-check-fill me-1"></i> Digital Solution Expert
+                <div class="badge bg-primary text-white p-2 px-3 rounded-pill shadow-lg" style="font-size: 0.8rem;">
+                  <i class="bi bi-patch-check-fill me-1"></i> Solution Oriented
                 </div>
               </div>
             </div>
@@ -143,7 +148,7 @@
             <div class="skill-box card border-0 p-4 shadow-sm h-100" style="background: var(--surface-color);">
               <i class="bi bi-people-fill mb-3" style="font-size: 1.5rem; color: var(--accent-color);"></i>
               <h3>Customer Relation</h3>
-              <p>Service Excellence, Accuracy, & Rapid Response Analyst.</p>
+              <p>Service Excellence, Accuracy, & Dispute Analysis.</p>
               <div class="d-flex justify-content-between progress-label">
                 <span>Expertise</span>
                 <span>95%</span>
@@ -158,7 +163,7 @@
             <div class="skill-box card border-0 p-4 shadow-sm h-100" style="background: var(--surface-color);">
               <i class="bi bi-gear-wide-connected mb-3" style="font-size: 1.5rem; color: var(--accent-color);"></i>
               <h3>Operation Dev</h3>
-              <p>Automasi Dashboard CRM & Sistem Monitoring Kerja.</p>
+              <p>CRM Automation & Internal Workflow Monitoring.</p>
               <div class="d-flex justify-content-between progress-label">
                 <span>Expertise</span>
                 <span>85%</span>
@@ -173,7 +178,7 @@
             <div class="skill-box card border-0 p-4 shadow-sm h-100" style="background: var(--surface-color);">
               <i class="bi bi-code-square mb-3" style="font-size: 1.5rem; color: var(--accent-color);"></i>
               <h3>Digital Solutions</h3>
-              <p>Web Maintenance, Apps Script, & Mobile Dev Consultant.</p>
+              <p>Web Maintenance & Google Workspace Automation.</p>
               <div class="d-flex justify-content-between progress-label">
                 <span>Expertise</span>
                 <span>80%</span>
@@ -188,7 +193,7 @@
             <div class="skill-box card border-0 p-4 shadow-sm h-100" style="background: var(--surface-color);">
               <i class="bi bi-megaphone-fill mb-3" style="font-size: 1.5rem; color: var(--accent-color);"></i>
               <h3>Marcom Strategy</h3>
-              <p>B2B Client Acquisition & Digital Communication.</p>
+              <p>Client Acquisition & Consultative Selling Strategy.</p>
               <div class="d-flex justify-content-between progress-label">
                 <span>Expertise</span>
                 <span>80%</span>
