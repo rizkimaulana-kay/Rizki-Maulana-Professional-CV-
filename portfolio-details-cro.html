@@ -16,32 +16,32 @@
   <style>
     .header { background: #101a20 !important; }
     
-    /* Perbaikan Slider CSS */
+    /* FIX NUKLIR: Kasih min-height biar box-nya GAK MUNGKIN kempes jadi hitam doang */
     .portfolio-details-slider {
-      background: var(--surface-color);
+      position: relative;
+      width: 100%;
+      min-height: 300px; 
       border-radius: 15px;
+      overflow: hidden;
+      background: var(--surface-color);
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      padding-bottom: 50px; /* Kasih ruang buat titik-titik navigasi di bawah */
     }
     
-    .portfolio-details-slider img {
+    .portfolio-details-slider .swiper-slide img {
       width: 100%;
       height: auto; 
-      border-radius: 15px;
       display: block;
+      border-radius: 15px;
     }
 
     .swiper-pagination {
-      bottom: 10px !important;
+      position: relative !important;
+      margin-top: 15px;
+      padding-bottom: 10px;
     }
     
-    .swiper-pagination-bullet {
-      background-color: rgba(255, 255, 255, 0.4) !important;
-    }
-    
-    .swiper-pagination-bullet-active {
-      background-color: var(--accent-color) !important;
-    }
+    .swiper-pagination-bullet { background-color: rgba(255, 255, 255, 0.4) !important; }
+    .swiper-pagination-bullet-active { background-color: var(--accent-color) !important; }
 
     /* Styling Kotak Info dan Deskripsi */
     .project-info {
@@ -116,33 +116,29 @@
                 {
                   "loop": true,
                   "speed": 600,
-                  "autoplay": {
-                    "delay": 4000
-                  },
+                  "autoplay": { "delay": 4000 },
                   "slidesPerView": 1,
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
+                  "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
                 }
               </script>
               <div class="swiper-wrapper align-items-center">
+                
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portofolio-4.jpg" alt="Outbound CRM AppSheet">
+                  <img src="assets/img/portfolio/portofolio-4.jpg" alt="Outbound CRM AppSheet" onerror="this.src='https://dummyimage.com/800x400/101a20/1387c1&text=Cek+Nama+File:+portofolio-4.jpg'">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Chat-Mekari.jpg" alt="Inbound Chat Mekari">
+                  <img src="assets/img/portfolio/Chat-Mekari.jpg" alt="Inbound Chat Mekari" onerror="this.src='https://dummyimage.com/800x400/101a20/1387c1&text=Cek+Nama+File:+Chat-Mekari.jpg'">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/CRM-Mekari.jpg" alt="Inbound CRM Mekari">
+                  <img src="assets/img/portfolio/CRM-Mekari.jpg" alt="Inbound CRM Mekari" onerror="this.src='https://dummyimage.com/800x400/101a20/1387c1&text=Cek+Nama+File:+CRM-Mekari.jpg'">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Gsheet-full.png" alt="KPI Monitoring Dashboard">
+                  <img src="assets/img/portfolio/Gsheet-full.png" alt="KPI Monitoring Dashboard" onerror="this.src='https://dummyimage.com/800x400/101a20/1387c1&text=Cek+Nama+File:+Gsheet-full.png'">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Gsheet-database.png" alt="Integrated Database">
+                  <img src="assets/img/portfolio/Gsheet-database.png" alt="Integrated Database" onerror="this.src='https://dummyimage.com/800x400/101a20/1387c1&text=Cek+Nama+File:+Gsheet-database.png'">
                 </div>
+
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -190,5 +186,6 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
-  </body>
+
+</body>
 </html>
