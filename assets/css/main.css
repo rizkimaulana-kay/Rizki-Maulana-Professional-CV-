@@ -1,56 +1,124 @@
-/**
-* Template Name: FolioOne - Rizki Maulana Final Version
-* Updated: May 2026
-*/
-
+/*--------------------------------------------------------------
+# Font & Color Variables
+--------------------------------------------------------------*/
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, sans-serif;
-  --heading-font: "Raleway", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+:root { 
   --background-color: #101a20;
   --default-color: #e7f2f7;
   --heading-color: #ffffff;
   --accent-color: #1387c1;
   --surface-color: #141f26;
   --contrast-color: #ffffff;
-  --nav-mobile-bg: #1a2c38;
 }
 
-body { color: var(--default-color); background-color: var(--background-color); font-family: var(--default-font); margin: 0; }
-a { color: var(--accent-color); text-decoration: none; transition: 0.3s; }
-h1, h2, h3, h4, h5, h6 { color: var(--heading-color); font-family: var(--heading-font); }
+:root {
+  --nav-color: #ffffff;
+  --nav-hover-color: #1387c1;
+  --nav-mobile-background-color: #213642;
+  --nav-dropdown-background-color: #051117;
+  --nav-dropdown-color: #e7f2f7;
+  --nav-dropdown-hover-color: #1387c1;
+}
+
+.light-background {
+  --background-color: #142027;
+  --surface-color: #325264;
+}
+
+.dark-background {
+  --background-color: #0b1419;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #252525;
+  --contrast-color: #ffffff;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
 
 /*--------------------------------------------------------------
-# Header & Navigation (Fix Mobile Poin 1)
+# General Styling & Shared Classes
 --------------------------------------------------------------*/
-.header {
-  background: #101a20; /* Solid agar tidak tembus pandang */
-  padding: 10px 0;
-  transition: 0.5s;
-  z-index: 997;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
 }
 
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  background-color: #101a20; /* Dibuat solid agar tidak transparan */
+  color: var(--default-color);
+  padding: 15px 0;
+  transition: all 0.5s;
+  z-index: 997;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+}
+
+.header .logo img { max-height: 36px; margin-right: 8px; }
+.header .logo h1 { font-size: 32px; margin: 0; font-weight: 400; color: var(--heading-color); }
+
+@media (max-width: 1200px) {
+  .header .logo { order: 1; }
+  .header .header-social-links { order: 2; }
+  .header .navmenu { order: 3; }
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+@media (min-width: 1200px) {
+  .navmenu ul { margin: 0; padding: 0; display: flex; list-style: none; align-items: center; }
+  .navmenu li { position: relative; padding: 15px 28px 15px 0; }
+  .navmenu a { color: var(--nav-color); font-size: 15px; font-family: var(--nav-font); transition: 0.3s; position: relative; }
+  .navmenu a:before { content: ""; position: absolute; height: 2px; bottom: -6px; left: 0; background-color: var(--nav-hover-color); visibility: hidden; width: 0px; transition: 0.3s; }
+  .navmenu a:hover:before, .navmenu .active:before { visibility: visible; width: 25px; }
+  .navmenu a:hover, .navmenu .active { color: var(--nav-hover-color); }
+}
+
+/* Mobile Nav Fix (Agar tidak transparan dan tidak penyet) */
 @media (max-width: 1199px) {
+  .mobile-nav-toggle { color: var(--nav-color); font-size: 28px; cursor: pointer; }
   .navmenu ul {
     display: none;
     position: fixed;
-    inset: 65px 15px 15px 15px; /* Memberi jarak agar tidak penyet */
+    inset: 65px 15px 15px 15px;
     padding: 20px;
     border-radius: 12px;
-    background-color: var(--nav-mobile-bg);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background-color: #1a2c38; /* Solid background */
+    border: 1px solid rgba(255, 255, 255, 0.1);
     z-index: 9998;
     flex-direction: column;
   }
-  .navmenu ul li { width: 100%; }
-  .navmenu ul li a { padding: 12px 0; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); }
   .mobile-nav-active .navmenu ul { display: flex; }
+  .navmenu ul li a { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); width: 100%; display: block; }
 }
 
 /*--------------------------------------------------------------
-# Portfolio (Sejajar & Overlay Tengah)
+# Portfolio (Kodingan Sakti Sejajar & Overlay Tengah)
 --------------------------------------------------------------*/
 .portfolio-item .portfolio-card {
   height: 100% !important;
@@ -62,7 +130,7 @@ h1, h2, h3, h4, h5, h6 { color: var(--heading-color); font-family: var(--heading
 }
 
 .portfolio-item .portfolio-img {
-  height: 280px !important; /* Kunci tinggi gambar */
+  height: 280px !important;
   position: relative;
   overflow: hidden;
 }
@@ -70,19 +138,19 @@ h1, h2, h3, h4, h5, h6 { color: var(--heading-color); font-family: var(--heading
 .portfolio-item .portfolio-img img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important; /* Agar gambar dashboard tidak gepeng */
+  object-fit: cover !important;
 }
 
 .portfolio-item .portfolio-overlay {
   position: absolute;
-  inset: 0; /* Full cover */
+  inset: 0;
   background: rgba(16, 26, 32, 0.85);
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   gap: 15px;
   opacity: 0;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .portfolio-card:hover .portfolio-overlay { opacity: 1; }
@@ -97,34 +165,14 @@ h1, h2, h3, h4, h5, h6 { color: var(--heading-color); font-family: var(--heading
 .portfolio-info { padding: 20px; flex-grow: 1; }
 
 /*--------------------------------------------------------------
-# Service Details & Sidebar (WhatsApp Fix)
+# CUSTOM ADD-ONS (Fitur Terbaru Semua Page)
 --------------------------------------------------------------*/
-.feature-card {
-  background: var(--surface-color);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 15px;
-  padding: 25px;
-  height: 100%;
-  transition: 0.3s;
-}
 
-.feature-card:hover { border-color: var(--accent-color); transform: translateY(-5px); }
+/* Progress Bars (About Page) */
+.progress { height: 10px; background: rgba(255,255,255,0.05); border-radius: 50px; margin-top: 10px; overflow: hidden; }
+.progress-bar { background-color: var(--accent-color); transition: width 1.5s ease-in-out; }
 
-.btn-whatsapp {
-  background: #25d366 !important;
-  color: white !important;
-  border-radius: 50px;
-  padding: 12px 20px;
-  font-weight: 600;
-  border: none;
-  transition: 0.3s;
-}
-
-.btn-whatsapp:hover { background: #1eb954 !important; transform: translateY(-2px); box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); }
-
-/*--------------------------------------------------------------
-# Skills & Others
---------------------------------------------------------------*/
+/* Skill Badges (Resume Page) */
 .skill-badge {
   background: var(--surface-color);
   color: var(--default-color);
@@ -137,5 +185,35 @@ h1, h2, h3, h4, h5, h6 { color: var(--heading-color); font-family: var(--heading
 }
 .skill-badge:hover { background: var(--accent-color); transform: translateY(-3px); }
 
-.btn-cv { background: #25d366 !important; color: white !important; border-radius: 50px; padding: 10px 25px; font-weight: 600; }
- 
+/* Feature Cards & WA Button (Service Details) */
+.feature-card {
+  background: var(--surface-color);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 15px;
+  padding: 25px;
+  height: 100%;
+  transition: 0.3s;
+}
+.feature-card:hover { border-color: var(--accent-color); transform: translateY(-5px); }
+
+.btn-whatsapp {
+  background: #25d366 !important;
+  color: white !important;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.3s;
+  border: none;
+}
+.btn-whatsapp:hover { background: #1eb954 !important; transform: translateY(-3px); }
+
+/* Buttons & Hero */
+.hero .btn { padding: 12px 30px; border-radius: 50px; font-weight: 600; border: 2px solid; transition: 0.3s; }
+.btn-cv { background: #25d366 !important; color: white !important; border-color: #25d366 !important; }
+
+/* Global Footer */
+.footer { padding: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; }
