@@ -4,16 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services - Rizki Maulana | Marcom Lead</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-
+  <title>Services - Rizki Maulana | Customer Relation & Ops Development</title>
+  
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;600;700&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -22,13 +20,18 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .header { background: #101a20 !important; }
+    .service-item { transition: 0.4s; height: 100%; }
+    .service-item:hover { transform: translateY(-10px); }
+    .highlight-card { border: 1px solid var(--accent-color) !important; }
+  </style>
 </head>
 
 <body class="services-page">
 
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
-
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -37,142 +40,125 @@
           <li><a href="services.html" class="active">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="https://www.dopagency.my.id/" target="_blank" style="background: var(--accent-color); color: white; padding: 8px 15px; border-radius: 50px; margin-left: 15px; font-weight: 600;">Visit DOP Agency <i class="bi bi-arrow-up-right-circle ms-1"></i></a></li>
+          <li><a href="https://www.dopagency.my.id/" target="_blank" style="background: var(--accent-color); color: white; padding: 8px 20px; border-radius: 50px; margin-left: 15px; font-weight: 600;">Visit DOP Agency <i class="bi bi-arrow-up-right-circle ms-1"></i></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
       <div class="header-social-links">
         <a href="https://www.instagram.com/rizkimaulanaa" class="instagram"><i class="bi bi-instagram"></i></a>
       </div>
-
     </div>
   </header>
 
   <main class="main">
-
     <section id="services" class="services section">
 
       <div class="container section-title" data-aos="fade-up">
-        <h2>Layanan & Keahlian</h2>
-        <p>Menghadirkan solusi terpadu melalui strategi komunikasi pemasaran yang kreatif serta optimasi sistem operasional berbasis data.</p>
-      </div><div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Layanan & Solusi Strategis</h2>
+        <p>
+          Berbekal pengalaman mendalam di bidang <strong>Customer Relation</strong> dan <strong>Operation Development</strong>, saya hadir untuk menciptakan efisiensi dalam setiap alur kerja. Melalui peran saya sebagai <strong>Markom Lead di DOP Agency</strong>, saya mengintegrasikan logika sistem operasional tersebut ke dalam solusi digital yang inovatif—mulai dari perancangan website hingga otomasi data untuk mendukung pertumbuhan bisnis Anda secara menyeluruh.
+        </p>
+      </div>
 
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center g-5">
 
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-  <a href="service-details.html" class="service-link">
-    <div class="service-item highlight-card" style="border: 1px solid var(--accent-color); cursor: pointer;">
-      <div class="service-icon">
-        <i class="bi bi-megaphone"></i>
-      </div>
-      <div class="service-content">
-        <h3>Digital Solution & Marcom <span class="badge bg-primary ms-2" style="font-size: 0.6rem;">Lead @ DOP Agency</span></h3>
-        <p>Konsultasi pembuatan & maintenance Website, pengembangan Mobile Apps, serta strategi Digital Marketing untuk akselerasi bisnis Anda.</p>
-        <span class="read-more" style="color: var(--accent-color); font-weight: 600; font-size: 0.8rem;">Lihat Detail Solusi <i class="bi bi-arrow-right"></i></span>
-      </div>
-    </div>
-  </a>
-</div>
+            <a href="service-details.html" class="service-link text-decoration-none">
+              <div class="service-item highlight-card p-4 rounded-4" style="background: var(--surface-color);">
+                <div class="service-icon mb-3">
+                  <i class="bi bi-megaphone" style="font-size: 2rem; color: var(--accent-color);"></i>
+                </div>
+                <div class="service-content">
+                  <h3 class="h4">Digital Solution & Marcom <span class="badge bg-primary ms-2" style="font-size: 0.65rem;">Lead @ DOP Agency</span></h3>
+                  <p class="text-muted">Konsultasi strategis pembuatan & maintenance Website, perbaikan sistem, pengembangan Mobile Apps, hingga manajemen komunikasi digital untuk memperkuat branding bisnis Anda.</p>
+                  <span class="read-more" style="color: var(--accent-color); font-weight: 600; font-size: 0.85rem;">Lihat Detail Solusi <i class="bi bi-arrow-right"></i></span>
+                </div>
+              </div>
+            </a>
+          </div>
+
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-bar-chart-line"></i>
+            <div class="service-item p-4 rounded-4" style="background: var(--surface-color);">
+              <div class="service-icon mb-3">
+                <i class="bi bi-bar-chart-line" style="font-size: 2rem; color: var(--accent-color);"></i>
               </div>
               <div class="service-content">
-                <h3>Data & Dashboard System</h3>
-                <p>Spesialis dalam membangun dashboard pemantauan kinerja menggunakan Google Spreadsheet dan Apps Script. Fokus pada otomasi laporan manajemen dan visualisasi KPI secara real-time.</p>
+                <h3 class="h4">Data & Dashboard System</h3>
+                <p class="text-muted">Membangun infrastruktur pelaporan dan monitoring kinerja menggunakan Google Spreadsheet & Apps Script. Fokus pada otomasi data real-time untuk pengambilan keputusan yang lebih cepat.</p>
               </div>
             </div>
           </div>
 
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-diagram-3"></i>
+            <div class="service-item p-4 rounded-4" style="background: var(--surface-color);">
+              <div class="service-icon mb-3">
+                <i class="bi bi-diagram-3" style="font-size: 2rem; color: var(--accent-color);"></i>
               </div>
               <div class="service-content">
-                <h3>Operational Leadership</h3>
-                <p>Berpengalaman memimpin tim operasional, mengelola pemetaan vendor/customer nasional, dan memastikan seluruh alur bisnis berjalan efisien sesuai Standard Operating Procedure (SOP).</p>
+                <h3 class="h4">Operational Leadership</h3>
+                <p class="text-muted">Mengorkestrasi alur kerja lintas divisi, pemetaan vendor nasional, dan memastikan operasional berjalan sesuai SOP guna mencapai efisiensi biaya serta waktu.</p>
               </div>
             </div>
           </div>
 
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-shield-check"></i>
+            <div class="service-item p-4 rounded-4" style="background: var(--surface-color);">
+              <div class="service-icon mb-3">
+                <i class="bi bi-shield-check" style="font-size: 2rem; color: var(--accent-color);"></i>
               </div>
               <div class="service-content">
-                <h3>Dispute & Risk Analysis</h3>
-                <p>Menganalisis dan memediasi sengketa pelanggan dengan pendekatan data-driven untuk memitigasi risiko kerugian operasional dan menjaga kredibilitas layanan perusahaan.</p>
+                <h3 class="h4">Dispute & Risk Analysis</h3>
+                <p class="text-muted">Menganalisis sengketa pelanggan dengan pendekatan mediasi berbasis data. Mitigasi risiko operasional untuk menjaga kredibilitas dan stabilitas layanan perusahaan.</p>
               </div>
             </div>
           </div>
 
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-tools"></i>
+            <div class="service-item p-4 rounded-4" style="background: var(--surface-color);">
+              <div class="service-icon mb-3">
+                <i class="bi bi-tools" style="font-size: 2rem; color: var(--accent-color);"></i>
               </div>
               <div class="service-content">
-                <h3>Asset & Fleet Maintenance</h3>
-                <p>Manajemen aset jangka panjang melalui monitoring pemeliharaan rutin armada kendaraan dan evaluasi performa vendor penyedia jasa perawatan untuk memastikan kelancaran teknis.</p>
+                <h3 class="h4">Asset & Fleet Maintenance</h3>
+                <p class="text-muted">Manajemen aset strategis melalui monitoring pemeliharaan rutin. Mengevaluasi performa teknis secara berkala untuk meminimalkan downtime operasional.</p>
               </div>
             </div>
           </div>
 
           <div class="col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item">
-              <div class="service-icon">
-                <i class="bi bi-music-note-beamed"></i>
+            <div class="service-item p-4 rounded-4" style="background: var(--surface-color);">
+              <div class="service-icon mb-3">
+                <i class="bi bi-music-note-beamed" style="font-size: 2rem; color: var(--accent-color);"></i>
               </div>
               <div class="service-content">
-                <h3>Creative Audio Production</h3>
-                <p>Eksplorasi produksi musik dan audio (aktif sejak 2009) yang memberikan perspektif kreatif unik dalam setiap solusi branding dan konten visual yang dikembangkan.</p>
+                <h3 class="h4">Creative Audio Production</h3>
+                <p class="text-muted">Eksplorasi produksi audio kreatif yang memberikan sentuhan unik dalam setiap konten visual dan branding yang saya kembangkan untuk klien.</p>
               </div>
             </div>
           </div>
 
         </div>
-
       </div>
-
-    </section></main>
+    </section>
+  </main>
 
   <footer id="footer" class="footer">
-
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Rizki Maulana</strong> <span>All Rights Reserved<br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
+    <div class="container text-center">
+      <p>© <strong>Rizki Maulana</strong>. All Rights Reserved</p>
+      <div class="social-links d-flex justify-content-center mt-3">
         <a href="https://www.instagram.com/rizkimaulanaa"><i class="bi bi-instagram"></i></a>
       </div>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
     </div>
-
   </footer>
 
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
   <div id="preloader"></div>
 
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
   <script src="assets/js/main.js"></script>
-
+  <script>AOS.init();</script>
 </body>
 
 </html>
