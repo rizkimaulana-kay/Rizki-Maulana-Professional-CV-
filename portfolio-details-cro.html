@@ -8,50 +8,12 @@
   
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   
   <style>
     .header { background: #101a20 !important; }
-    
-    .project-info {
-      background: var(--surface-color);
-      padding: 30px;
-      border-radius: 15px;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .project-info h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .project-info ul { list-style: none; padding: 0; font-size: 15px; }
-    .project-info ul li {
-      padding: 10px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .project-info ul li strong { color: var(--accent-color); }
-    
-    .description h2 { font-size: 28px; font-weight: 700; color: var(--accent-color); }
-    .description h4 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-top: 35px;
-      color: #fff;
-      border-left: 4px solid var(--accent-color);
-      padding-left: 15px;
-    }
-    .description p, .description li {
-      line-height: 1.8;
-      color: rgba(255,255,255,0.85);
-      text-align: justify;
-    }
-    .highlight-text { color: var(--accent-color); font-weight: 600; }
 
     /* Custom Carousel Bootstrap */
     .carousel-inner {
@@ -66,6 +28,94 @@
     }
     .carousel-indicators [data-bs-target] {
       background-color: var(--accent-color);
+    }
+
+    /* Teks Header Atas */
+    .project-header h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .project-header p {
+      color: var(--default-color);
+      font-size: 16px;
+      opacity: 0.8;
+      margin-bottom: 30px;
+    }
+
+    /* Custom Accordion (Buka-Tutup) */
+    .custom-accordion .accordion-item {
+      background-color: transparent;
+      border: none;
+      margin-bottom: 12px;
+    }
+    .custom-accordion .accordion-button {
+      background-color: var(--surface-color);
+      color: rgba(255,255,255,0.8);
+      border-radius: 10px !important;
+      border: 1px solid rgba(255,255,255,0.05);
+      box-shadow: none;
+      padding: 15px 20px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .custom-accordion .accordion-button::after {
+      filter: invert(1) grayscale(100%) brightness(200%);
+    }
+    /* Warna saat Accordion Terbuka */
+    .custom-accordion .accordion-button:not(.collapsed) {
+      background-color: rgba(19, 135, 193, 0.05); 
+      color: var(--accent-color);
+      border: 1px solid var(--accent-color);
+    }
+    .custom-accordion .accordion-button:not(.collapsed)::after {
+      filter: none;
+    }
+    .custom-accordion .accordion-body {
+      color: rgba(255,255,255,0.75);
+      background-color: var(--surface-color);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.05);
+      border-top: none;
+      margin-top: -5px;
+      padding: 20px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    /* Fitur Unggulan List */
+    .right-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 15px;
+      margin-top: 30px;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .feature-list li {
+      background: var(--surface-color);
+      color: rgba(255,255,255,0.85);
+      padding: 12px 20px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border-left: 3px solid var(--accent-color);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      border-top: 1px solid rgba(255,255,255,0.02);
+      border-right: 1px solid rgba(255,255,255,0.02);
+      border-bottom: 1px solid rgba(255,255,255,0.02);
+    }
+    .feature-list li i {
+      color: var(--accent-color);
+      font-size: 1.2rem;
     }
   </style>
 </head>
@@ -92,10 +142,16 @@
     <section id="portfolio-details" class="portfolio-details py-5">
       <div class="container">
         
+        <div class="row project-header">
+          <div class="col-12">
+            <h2>National CRO Ecosystem</h2>
+            <p>Sentralisasi & Otomasi Operasional Customer Relation Berbasis AppSheet.</p>
+          </div>
+        </div>
+
         <div class="row gy-4">
           
-          <div class="col-lg-8">
-            
+          <div class="col-lg-7">
             <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"></button>
@@ -132,39 +188,65 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-
-            <div class="description mt-5">
-              <h2>Sentralisasi & Otomasi Operasional CRO Nasional</h2>
-              <p>Proyek ini mentransformasi sistem <strong>Customer Relation Officer (CRO)</strong> di <strong>PT IBT</strong> dari cara manual menggunakan WhatsApp pribadi menjadi ekosistem CRM terpusat.</p>
-
-              <h4>Tantangan & Masalah Utama</h4>
-              <p>Sebelumnya, 8 CRO mengelola customer secara nasional dengan nomor pribadi, sehingga status <em>follow-up</em> aktual sulit dipantau manajemen. Banyak tiket dibuat tapi unit tidak jelas apakah sudah masuk bengkel atau belum.</p>
-
-              <h4>Solusi Hibrida: Inbound & Outbound</h4>
-              <p>Menyadari <strong>Mekari</strong> hanya mencakup alur <span class="highlight-text">Inbound</span>, saya membangun sistem <span class="highlight-text">Outbound</span> mandiri menggunakan AppSheet.</p>
-              
-              <p><strong>1. Sistem Inbound (Mekari):</strong> Menggunakan fitur chat real-time dan CRM tiket untuk menerima case awal.</p>
-              <p><strong>2. Sistem Outbound (Custom Ecosystem):</strong> Awalnya berbasis GSheet dengan <em>Apps Script</em> & <em>Fonnte</em> untuk alert WA, lalu saya transformasikan ke <strong>AppSheet</strong> agar lebih mobile-friendly dan transparan dengan login pribadi masing-masing CRO.</p>
-
-              <h4>Hasil Akhir & Dampak</h4>
-              <p>Supervisor kini bisa memantau <em>Aging Case</em> secara real-time. KPI tim, jumlah pending case, dan solved case kini terpampang nyata di dashboard tanpa perlu input manual yang melelahkan.</p>
-            </div>
-            
           </div>
 
-          <div class="col-lg-4">
-            <div class="project-info">
-              <h3>Project Information</h3>
-              <ul>
-                <li><strong>Kategori:</strong> <span>Operation Development</span></li>
-                <li><strong>Instansi:</strong> <span>PT Indomobil Bussan Trucking</span></li>
-                <li><strong>Role:</strong> <span>Project Manager (Outbound System)</span></li>
-                <li><strong>Tech Stack:</strong> <span>AppSheet, Apps Script, GSheet, Mekari</span></li>
-              </ul>
-              <div class="mt-4">
-                <a href="portfolio.html" class="btn btn-outline w-100" style="border-radius: 50px;">Kembali ke Portofolio</a>
+          <div class="col-lg-5">
+            
+            <h3 class="right-title" style="margin-top: 0;">Detail Proyek</h3>
+            
+            <div class="accordion custom-accordion" id="projectAccordion">
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="bi bi-window-stack me-2"></i> Gambaran Proyek
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#projectAccordion">
+                  <div class="accordion-body">
+                    Proyek ini mentransformasi sistem kerja <strong>Customer Relation Officer (CRO)</strong> di <strong>PT Indomobil Bussan Trucking (IBT)</strong>. Merubah alur kerja manual menggunakan WhatsApp pribadi menjadi sebuah ekosistem CRM terpusat yang terpantau secara real-time.
+                  </div>
+                </div>
               </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="bi bi-search me-2"></i> Tantangan
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#projectAccordion">
+                  <div class="accordion-body">
+                    Sebelumnya, komunikasi dilakukan via nomor pribadi sehingga status <em>follow-up</em> aktual sulit dipantau manajemen. Banyak tiket dibuat di sistem lama, namun unit kendaraan tidak jelas apakah sudah masuk bengkel, <em>pending</em>, atau sudah selesai.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <i class="bi bi-shield-check me-2"></i> Solusi & Eksekusi
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#projectAccordion">
+                  <div class="accordion-body">
+                    Menyadari vendor (Mekari) hanya mencakup Inbound, saya merancang sistem Outbound menggunakan ekosistem Google. Mengawali dengan GSheet + Apps Script untuk notifikasi Fonnte, lalu menyempurnakannya ke dalam <strong>AppSheet</strong> agar lebih ramah seluler (mobile-friendly) dengan akses login per-karyawan.
+                  </div>
+                </div>
+              </div>
+
+            </div> <h3 class="right-title">Fitur & Teknologi</h3>
+            <ul class="feature-list">
+              <li><i class="bi bi-phone"></i> AppSheet Mobile CRM System</li>
+              <li><i class="bi bi-robot"></i> Apps Script Data Automation</li>
+              <li><i class="bi bi-whatsapp"></i> Fonnte Auto-Reminder Alert</li>
+              <li><i class="bi bi-headset"></i> Mekari Inbound Integration</li>
+            </ul>
+
+            <div class="mt-4">
+              <a href="portfolio.html" class="btn btn-outline w-100" style="border-radius: 50px;">Kembali ke Portofolio</a>
             </div>
+
           </div>
           
         </div>
