@@ -9,28 +9,76 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   
   <style>
     .header { background: #101a20 !important; }
     
-    /* Styling Keterangan Proyek */
+    /* Styling Kotak Info dan Deskripsi */
     .project-info {
       background: var(--surface-color);
       padding: 30px;
       border-radius: 15px;
       border: 1px solid rgba(255,255,255,0.1);
     }
-    .project-info h3 { font-size: 22px; font-weight: 700; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; margin-bottom: 15px; }
-    .project-info ul { list-style: none; padding: 0; font-size: 15px; }
-    .project-info ul li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-    .project-info ul li strong { color: var(--accent-color); display: block; margin-bottom: 5px; }
+    .project-info h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .project-info ul {
+      list-style: none;
+      padding: 0;
+      font-size: 15px;
+    }
+    .project-info ul li {
+      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .project-info ul li strong {
+      color: var(--accent-color);
+    }
     
-    .description h2 { font-size: 28px; font-weight: 700; color: var(--accent-color); margin-bottom: 20px;}
-    .description h4 { font-size: 20px; font-weight: 700; margin-top: 30px; color: #fff; border-left: 4px solid var(--accent-color); padding-left: 15px; }
-    .description p, .description li { line-height: 1.8; color: rgba(255,255,255,0.85); text-align: justify; }
+    .description h2 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--accent-color);
+    }
+    .description h4 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 35px;
+      color: #fff;
+      border-left: 4px solid var(--accent-color);
+      padding-left: 15px;
+    }
+    .description p, .description li {
+      line-height: 1.8;
+      color: rgba(255,255,255,0.85);
+      text-align: justify;
+    }
+    .highlight-text { color: var(--accent-color); font-weight: 600; }
+
+    /* Custom Carousel Bootstrap */
+    .carousel-inner {
+      border-radius: 15px;
+      background-color: var(--surface-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .carousel-item img {
+      border-radius: 15px;
+      width: 100%;
+      height: auto;
+    }
+    .carousel-indicators [data-bs-target] {
+      background-color: var(--accent-color);
+    }
   </style>
 </head>
 
@@ -60,36 +108,42 @@
           
           <div class="col-lg-8">
             
-            <div class="portfolio-details-slider swiper init-swiper rounded-4 shadow-lg" style="background: var(--surface-color);">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": { "delay": 4000 },
-                  "slidesPerView": 1,
-                  "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
-                }
-              </script>
-              <div class="swiper-wrapper align-items-center">
-                
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portofolio-4.jpg" alt="Outbound CRM AppSheet" class="img-fluid w-100">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Chat-Mekari.jpg" alt="Inbound Chat Mekari" class="img-fluid w-100">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/CRM-Mekari.jpg" alt="Inbound CRM Mekari" class="img-fluid w-100">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Gsheet-full.png" alt="KPI Monitoring Dashboard" class="img-fluid w-100">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/Gsheet-database.png" alt="Integrated Database" class="img-fluid w-100">
-                </div>
-
+            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+              
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
               </div>
-              <div class="swiper-pagination"></div>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/portfolio/portofolio-4.jpg" class="d-block w-100" alt="Outbound CRM AppSheet">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/portfolio/Chat-Mekari.jpg" class="d-block w-100" alt="Inbound Chat Mekari">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/portfolio/CRM-Mekari.jpg" class="d-block w-100" alt="Inbound CRM Mekari">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/portfolio/Gsheet-full.png" class="d-block w-100" alt="KPI Monitoring Dashboard">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/portfolio/Gsheet-database.png" class="d-block w-100" alt="Integrated Database">
+                </div>
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
 
             <div class="description mt-5">
@@ -100,7 +154,7 @@
               <p>Sebelumnya, 8 CRO mengelola customer secara nasional dengan nomor pribadi, sehingga status <em>follow-up</em> aktual sulit dipantau manajemen. Banyak tiket dibuat tapi unit tidak jelas apakah sudah masuk bengkel atau belum.</p>
 
               <h4>Solusi Hibrida: Inbound & Outbound</h4>
-              <p>Menyadari <strong>Mekari</strong> hanya mencakup alur Inbound, saya membangun sistem Outbound mandiri menggunakan AppSheet.</p>
+              <p>Menyadari <strong>Mekari</strong> hanya mencakup alur <span class="highlight-text">Inbound</span>, saya membangun sistem <span class="highlight-text">Outbound</span> mandiri menggunakan AppSheet.</p>
               
               <p><strong>1. Sistem Inbound (Mekari):</strong> Menggunakan fitur chat real-time dan CRM tiket untuk menerima case awal.</p>
               <p><strong>2. Sistem Outbound (Custom Ecosystem):</strong> Awalnya berbasis GSheet dengan <em>Apps Script</em> & <em>Fonnte</em> untuk alert WA, lalu saya transformasikan ke <strong>AppSheet</strong> agar lebih mobile-friendly dan transparan dengan login pribadi masing-masing CRO.</p>
@@ -131,15 +185,9 @@
     </section>
   </main>
 
-  <footer id="footer" class="footer">
-    <div class="container text-center py-4">
-      <p>© <strong>Rizki Maulana</strong>. All Rights Reserved</p>
-    </div>
-  </footer>
-
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
